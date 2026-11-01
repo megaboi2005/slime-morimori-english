@@ -1,4 +1,4 @@
-# Slime MoriMori Dragon Quest – English Translation w
+# Slime MoriMori Dragon Quest – English Translation
 ## SLOP CODED!!!!!!!
 
 Fan translation patch for **Slime MoriMori Dragon Quest: Shōgeki no Shippo Dan** (Game Boy Advance, Japan, 2003).
