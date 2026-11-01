@@ -1,8 +1,9 @@
-# Slime MoriMori Dragon Quest – English Translation
+# Slime MoriMori Dragon Quest – English Translation w
+## SLOP CODED!!!!!!!
 
 Fan translation patch for **Slime MoriMori Dragon Quest: Shōgeki no Shippo Dan** (Game Boy Advance, Japan, 2003).
 
-> _TODO: intro / screenshots_
+Friend wanted a translation patch for it and so I deployed claude and local LLMS on it on my m4 mac mini. I am not a fan of vibe coding and vibe coders piss me off with how tech illiterate they are but I am all for this kind of thing because some games get locked behind localization and it's not cool. This seriously took like 15-24 hours of claude pro. Issues will go straight to claude and claude will push out a fix and test it whenever my m4 is running.
 
 ## Download & patching
 
@@ -31,8 +32,6 @@ This repository does **not** contain or link to any ROMs.
 - [x] Pot Crash minigame logo
 - [x] Yes/No choice boxes (shown as **Ok/No**; the box is too narrow for "Yes")
 - [ ] Name entry hint ticker (still Japanese; the name entry keyboard has an English page)
-
-> _TODO: known issues_
 
 ## Translation rules
 
