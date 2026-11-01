@@ -73,6 +73,8 @@ python3 -m venv .venv && .venv/bin/pip install pillow capstone
 tools/build.sh                          # writes build/rocketslime_en.gba + .ips
 ```
 
+Every build is tested in the emulator (mGBA): each message is shown in a real speech bubble and checked for overflow. See [`tests/README.md`](tests/README.md).
+
 Corrections go in [`script/fixes.json`](script/fixes.json), which overrides the base translation in `script/en.json`.
 
 This is an unofficial fan project and is not affiliated with Square Enix. Dragon Quest is a trademark of Square Enix.

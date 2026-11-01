@@ -22,3 +22,9 @@ script/fixes.before_*.json
 # Decompilation tooling (not published)
 ghidra_scripts/
 tools/run_ghidra.sh
+
+# Emulator test output and save states (contain game graphics/RAM)
+tests/out/
+tests/out_ja/
+tests/states/
+tests/*.log

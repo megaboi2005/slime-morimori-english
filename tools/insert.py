@@ -89,6 +89,7 @@ class Encoder:
         self.inv = {}
         for code, s in tbl.items(): self.inv.setdefault(s, code)
         self.names = names
+        self.plate_len = 0
 
     def width(self, word):
         w = 0
@@ -148,7 +149,12 @@ class Encoder:
             elif t.startswith('{name:'):
                 hx = t[6:-1]
                 en = self.names.get(nameplate.decode(hx))
-                out += b'\x05' + (nameplate.encode(en) if en else bytes.fromhex(hx)) + b'\x05'
+                plate = nameplate.encode(en) if en else bytes.fromhex(hx)
+                # a mid-message speaker change only redraws as many tiles as the new name has:
+                # pad with spaces so a longer previous name doesn't leave letters behind ("Big Bron")
+                plate += nameplate.encode(' ') * (self.plate_len - len(plate))
+                self.plate_len = max(self.plate_len, len(plate))
+                out += b'\x05' + plate + b'\x05'
             elif t.startswith('{') and t[1:-1] in CTRL_BYTES: out += CTRL_BYTES[t[1:-1]]
             elif re.fullmatch(r'\{[0-9a-f]{2}:[0-9a-f]{2}\}', t): out += bytes([int(t[1:3], 16), int(t[4:6], 16)])
             elif re.fullmatch(r'\{[0-9a-f]{2,3}\}', t): out += code_bytes(int(t[1:-1], 16))
@@ -158,6 +164,7 @@ class Encoder:
 
     def message(self, ja, tr):
         """Rebuild one message from its Japanese source layout and the English pages."""
+        self.plate_len = 0
         name = re.match(r'^\{name:[0-9a-f]+\}', ja)
         out = bytearray(self.raw_bytes(name.group()) if name else b'')
         body = ja[name.end():] if name else ja
