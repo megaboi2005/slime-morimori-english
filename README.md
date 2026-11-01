@@ -75,8 +75,4 @@ tools/build.sh                          # writes build/rocketslime_en.gba + .ips
 
 Corrections go in [`script/fixes.json`](script/fixes.json), which overrides the base translation in `script/en.json`.
 
-## Credits
-
-> _TODO_
-
 This is an unofficial fan project and is not affiliated with Square Enix. Dragon Quest is a trademark of Square Enix.
