@@ -1,0 +1,24 @@
+# Never commit game data: ROMs, patched ROMs, decompiled code, Japanese script dump
+*.gba
+*.sav
+*.ss[0-9]
+decomp/
+ghidra_proj/
+script/ja.json
+build/*
+!build/.gitkeep
+
+# Local working files
+.venv/
+__pycache__/
+tools/harness/harness
+script/translate.log
+script/*partial*.json
+script/*test*.json
+script/ab_*.json
+script/fixes.before_*.json
+.DS_Store
+
+# Decompilation tooling (not published)
+ghidra_scripts/
+tools/run_ghidra.sh
