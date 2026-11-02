@@ -16,7 +16,7 @@ script/translate.log
 script/*partial*.json
 script/*test*.json
 script/ab_*.json
-script/fixes.before_*.json
+script/*.before_*.json
 .DS_Store
 
 # Decompilation tooling (not published)

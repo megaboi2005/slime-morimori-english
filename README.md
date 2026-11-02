@@ -38,8 +38,8 @@ This repository does **not** contain or link to any ROMs.
 These are the conventions used across the script. Please follow them in fixes and suggestions.
 
 **Names**
-- Character, place and item names follow the official English localization (*Rocket Slime*, DS) where it exists: Slurrington, Plob, Hooly, Drahart Jr, Don Mojar, Elasto Blast, Mt. Melazoma, and so on.
-- The hero's default name is **Rock**. The NPC ロック is **Rocco**.
+- Character, place and item names follow the official English localization (*Rocket Slime*, DS) where it exists: Boingburg, the Plob, Don Clawleone, Swotsy, Bo, Ducktor Cid, the Goonin, Elasto Blast, and so on (list thanks to eadmaster's [Translimeation](https://github.com/eadmaster/Translimeation) project). Places whose English name is already printed in the game's graphics keep that spelling so dialogue matches the map: Nokke Woods, Ul-Otter River, Nikomisky Mine, Cara-Cara Pool, Mt. Merazoma, Mio Roshtar.
+- The hero's default name is **Rock**. The NPC ロック is **Kworry**.
 - Full lists are in [`script/names.json`](script/names.json) (speakers) and [`script/glossary.json`](script/glossary.json) (terms).
 
 **Style**
